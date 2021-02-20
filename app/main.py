@@ -25,7 +25,7 @@ def upload_img(medicine_name,uploadedfile: UploadFile = File(...)):
             imgName = UPLOAD_FOLDER + uploadedfile.filename
             pp=ColorDetection.MedicineColorDetection()
             img=cv.imread(imgName)
-            return pp.detectMedecineCategorie(img)
+            return pp.get_categorie(img,medicine_name)
     else :
         return 'extension not allowed'
 if __name__ == '__main__':
