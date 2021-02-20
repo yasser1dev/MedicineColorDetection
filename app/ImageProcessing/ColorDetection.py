@@ -5,7 +5,7 @@ import cv2
 class MedicineColorDetection:
 
     def __init__(self):
-        self.boundries={'blue':[np.array([100,150,0],np.uint8),np.array([140,255,255],np.uint8)]}
+        self.boundries={'blue':[(90,50,70),(128,255,255)]}
 
     @staticmethod
     def calcPercentage(msk):
